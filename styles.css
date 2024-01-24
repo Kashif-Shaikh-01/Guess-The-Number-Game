@@ -1,0 +1,218 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: whitesmoke;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(
+    43deg,
+    #4158d0 0%,
+    #c850c0 30%,
+    /* #c850c0 46%, */ #ffcc70 100%
+  );
+}
+.game {
+  background: #602376;
+  height: 80vh;
+  border-radius: 8%;
+  width: 50vw;
+  /* border: 2px solid red; */
+}
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-transform: lowercase;
+}
+.heading {
+  margin: 35px;
+  font-family: "Bungee Spice", cursive;
+  text-decoration: dotted;
+  /* border: 2px solid red; */
+}
+.reset {
+  height: 7vh;
+  width: 20%;
+  align-self: flex-start;
+  font-size: 1.5rem;
+  display: inline-block;
+  margin-left: 45px;
+  outline: none;
+  padding: 10px;
+  text-align: center;
+  font-family: "Press Start 2P", cursive;
+  border-radius: 5%;
+  box-shadow: 0px 12px 18px 0px black;
+  /* border: 2px solid red; */
+}
+.between {
+  font-size: 0.9rem;
+  display: inline-block;
+  align-self: self-end;
+  margin-top: -50px;
+  font-family: "Press Start 2P", cursive;
+  margin-right: 25px;
+  text-transform: capitalize;
+  /* border: 2px solid red; */
+}
+.question {
+  display: block;
+  font-size: 8rem;
+  align-self: center;
+  margin: 50px;
+  width: 20%;
+  background: yellowgreen;
+  background: #000;
+  border-radius: 50%;
+  font-family: "Bungee Spice", cursive;
+  text-align: center;
+  animation-name: QUEST;
+  animation-duration: 12s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0.1s;
+  animation-iteration-count: infinite;
+  animation-direction: reverse;
+  animation-fill-mode: none;
+}
+@keyframes QUEST {
+  0% {
+    transform: rotate3d(0, 0, 0, 0deg);
+  }
+  25% {
+    transform: rotate3d(0, 1, 0, 240deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* second main */
+main {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+}
+.square {
+  width: 12vw;
+  height: 12vh;
+  margin-bottom: 1.1rem;
+  font-size: 4rem;
+  outline: none;
+  background: #602376;
+  border: 5px solid whitesmoke;
+  text-align: center;
+  font-family: "Bungee Spice", cursive;
+}
+.guess {
+  padding: 10px 15px;
+  width: auto;
+  align-self: center;
+  height: auto;
+  font-size: 1.8rem;
+  font-family: "Bungee Spice";
+  box-shadow: 0px 2px 8px 0px black;
+}
+.guess:hover {
+  background: #60b376;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+}
+.right {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+.message {
+  font-size: 1.2rem;
+  text-align: center;
+  font-family: "Press Start 2P", cursive;
+}
+.label-score {
+  margin: 20px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  font-family: "Press Start 2P", cursive;
+}
+.score {
+  font-family: "Bungee Spice", cursive;
+  font-size: 1.8rem;
+}
+
+/* /// RESPONSIVE /// */
+* {
+  text-align: center;
+}
+@media (min-width: 320px) and (max-width: 600px) {
+  .game {
+    width: 80vw;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+  }
+  .heading {
+    font-size: 0.9rem;
+  }
+  .reset {
+    height: 6vh;
+    width: 25%;
+    margin: 10px 15px;
+    font-size: 0.6rem;
+  }
+  .between {
+    font-size: 0.5rem;
+    margin-top: -40px;
+  }
+  .question {
+    font-size: 4rem;
+    width: 25%;
+    height: auto;
+    /* padding: 0px 5px; */
+  }
+  /* /// main/ */
+  .square {
+    width: 25vw;
+    height: 9vh;
+    margin: 25px;
+    font-size: 2rem;
+  }
+  .guess {
+    width: 25vw;
+    font-size: 1.1rem;
+  }
+  .message {
+    font-size: 0.8rem;
+    line-height: 30px;
+    margin-top: -15px;
+    margin-bottom: 10px;
+  }
+  .label-score {
+    font-size: 0.7rem;
+    line-height: 30px;
+    line-height: 25px;
+  }
+  .score {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 400px) and (max-width: 525px) {
+  .question {
+    font-size: 5rem;
+    width: 25%;
+    height: 6rem;
+  }
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Raleway:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="game">
+      <header>
+        <h1 class="heading">Guess The Number ?</h1>
+        <button class="reset">Reset!</button>
+        <p class="between">[Between 1 to 10]</p>
+        <div class="question">?</div>
+      </header>
+
+      <main>
+        <section class="left">
+          <input type="number" value="" class="square" />
+          <button class="guess">Guess</button>
+        </section>
+
+        <section class="right">
+          <p class="message">Let's Guess...😋</p>
+          <p class="label-score">Your Score : <span class="score">100</span></p>
+        </section>
+      </main>
+    </div>
+    <script src="/script.js"></script>
+  </body>
+</html>
